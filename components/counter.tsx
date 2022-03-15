@@ -10,11 +10,11 @@ export default function Counter() {
         setCountH(countHundred - 1)
     }
 
-    
+
     return (
         <>
             <p>Counter</p>
-            <div className="ui labeled button" tabIndex="0" onClick={countUp}>
+            <div className="ui labeled button" tabindex="0" onClick={countUp}>
                 <div className="ui red button">
                     <i className="heart icon" /> Up
                 </div>
@@ -22,7 +22,7 @@ export default function Counter() {
                     {count}
                 </a>
             </div>
-            <div className="ui labeled button" tabIndex="0" onClick={countDown}>
+            <div className="ui labeled button" tabindex="0" onClick={countDown}>
                 <div className="ui basic blue button">
                     <i className="fork icon" /> Down
                 </div>
