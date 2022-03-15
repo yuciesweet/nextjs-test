@@ -9,10 +9,10 @@ type TestRes = {
 
 export default (req:NextApiRequest, res:NextApiResponse<TestRes>) => {
     const result:TestRes = {
-        requestMethod: req.method,
-        queryString: req.query.id,
-        headerHost: req.headers.host,
-        headerUA: req.headers["user-agent"],
+        requestMethod: String(req.method),
+        queryString: String(req.query.id),
+        headerHost: String(req.headers.host),
+        headerUA: String(req.headers["user-agent"]),
     } 
     res.status(200).json(result)
 }
