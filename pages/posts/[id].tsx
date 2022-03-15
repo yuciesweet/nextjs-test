@@ -1,9 +1,15 @@
+import { NextPageContext } from 'next'
 import Layout from '/components/layout'
 import {getAllAPiData} from '/lib/posts-dynamic'
 
+interface Props{
+    ad1: String
+    ad2: String
+    ad3: String
+    zip: String
+}
 
-
-export async function getServerSideProps(context){
+export async function getServerSideProps(context:NextPageContext){
     //変数宣言
     let address1: string = "不明な都道府県"
     let address2: string = "不明な市区町村"
@@ -33,7 +39,7 @@ export async function getServerSideProps(context){
     } 
 }
 
-export default function Post({ad1,ad2,ad3,zip}){
+export default function Post({ad1,ad2,ad3,zip}:Props){
     return (
     <>
         <Layout>

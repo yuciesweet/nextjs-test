@@ -1,0 +1,1 @@
+{"c":["pages/posts/[id]","webpack"],"r":["pages/buttontest"],"m":["./components/button.tsx","./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fbuttontest&absolutePagePath=%2Fworkspace%2Fpages%2Fbuttontest.tsx!","./node_modules/next/head.js","./pages/buttontest.tsx"]}

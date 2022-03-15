@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export async function getAllAPiData(id) {
+export async function getAllAPiData(id:string) {
 
     //郵便番号検索API 
     const Url = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=" + id
