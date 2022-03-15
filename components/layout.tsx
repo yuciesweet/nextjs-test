@@ -1,5 +1,10 @@
+import { ReactNode } from 'react'
 import styles from './layout.module.css'
 
-export default function Div({ children }){
+interface Props{
+    children:ReactNode
+}
+
+export default function Div({ children }:Props){
     return <div className={styles.container}>{children}</div>
 }
