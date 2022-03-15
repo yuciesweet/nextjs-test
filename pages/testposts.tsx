@@ -1,4 +1,13 @@
-import {getAllAPiData} from '/lib/posts'
+import {getAllAPiData} from '../lib/posts'
+
+interface Props{
+    ad1: String
+    ad2: String
+    ad3: String
+    pc: String
+    zip: String
+    st: String
+}
 
 export async function getServerSideProps(){
     const allAPiData = await getAllAPiData()
@@ -14,7 +23,7 @@ export async function getServerSideProps(){
     }
 }
 
-export default function yubinApiPost({ad1,ad2,ad3,pc,zip,st}){
+export default function yubinApiPost({ad1,ad2,ad3,pc,zip,st}:Props){
     return(
     <>
         <h1>Yubin Post!</h1>
