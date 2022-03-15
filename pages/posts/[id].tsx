@@ -1,6 +1,7 @@
 import { NextPageContext } from 'next'
-import Layout from '/components/layout'
-import {getAllAPiData} from '/lib/posts-dynamic'
+import { ParsedUrlQuery } from 'querystring'
+import Layout from '../../components/layout'
+import {getAllAPiData} from '../../lib/posts-dynamic'
 
 interface Props{
     ad1: String
@@ -20,7 +21,7 @@ export async function getServerSideProps(context:NextPageContext){
     const {id} = context.query
 
     // 郵便番号APIからデータを取得
-    const allApiData = await getAllAPiData(id)
+    const allApiData = await getAllAPiData(String(id))
 
     //郵便番号APIの取得に成功した場合はそれぞれの値をAPIから取得した値に書き換え
     if(allApiData.results != null){
